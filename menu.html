@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Cafe MAJI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-white text-gray-700">
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 w-full z-50 text-white">
+        <!-- Header content will be dynamically loaded or duplicated. For now, keep it consistent. -->
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" id="logo" class="text-2xl font-bold text-amber-300 transition-colors duration-300" style="font-family: 'Playfair Display', serif;">Cafe MAJI</a>
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="menu.html" class="nav-link text-gray-200 hover:text-white">Menu</a>
+                <a href="about.html" class="nav-link text-gray-200 hover:text-white">About Us</a>
+                <a href="location.html" class="nav-link text-gray-200 hover:text-white">Location / Contact</a>
+                <a href="gallery.html" class="nav-link text-gray-200 hover:text-white">Gallery</a>
+                <a href="https://www.yelp.com/biz/cafe-maji-artesia" target="_blank" class="nav-link text-gray-200 hover:text-white text-xl">
+                    <i class="fab fa-yelp"></i>
+                </a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-2xl text-white transition-colors duration-300">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 bg-white/95 backdrop-blur-sm rounded-b-lg shadow-lg">
+            <a href="menu.html" class="block py-2 px-3 text-gray-700 hover:bg-amber-100 rounded">Menu</a>
+            <a href="about.html" class="block py-2 px-3 text-gray-700 hover:bg-amber-100 rounded">About Us</a>
+            <a href="location.html" class="block py-2 px-3 text-gray-700 hover:bg-amber-100 rounded">Location / Contact</a>
+            <a href="gallery.html" class="block py-2 px-3 text-gray-700 hover:bg-amber-100 rounded">Gallery</a>
+             <a href="https://www.yelp.com/biz/cafe-maji-artesia" target="_blank" class="block py-2 px-3 text-gray-700 hover:bg-amber-100 rounded">
+                <i class="fab fa-yelp mr-2"></i> Yelp
+            </a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-24">
+        <section id="menu" class="my-16">
+            <h1 class="section-title pt-12">Our Menu</h1>
+            <!-- Menu items will be injected here by menu.js -->
+            <div id="menu-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Loading indicator -->
+                 <p id="loading" class="text-center col-span-full">Loading menu...</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+         <div class="container mx-auto px-6 text-center">
+            <p class="font-bold text-xl mb-2 text-amber-300" style="font-family: 'Playfair Display', serif;">Cafe MAJI</p>
+            <p class="text-gray-300">12232 Artesia Blvd, Artesia, CA 90701</p>
+            <p class="text-gray-300">(562) 281-9511</p>
+            <div class="mt-4 text-2xl space-x-6">
+                <a href="#" class="hover:text-amber-300 transition-colors"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-amber-300 transition-colors"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.yelp.com/biz/cafe-maji-artesia" target="_blank" class="hover:text-amber-300 transition-colors"><i class="fab fa-yelp"></i></a>
+            </div>
+            <p class="mt-6 text-sm text-gray-400">&copy; 2025 Cafe MAJI. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>
