@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,19 +13,19 @@
 </head>
 <body class="bg-white text-gray-700">
 
-    <!-- Header & Navigation -->
-    <header class="fixed top-0 w-full z-50 text-white">
+    <!-- Header & Navigation (Corrected for Sub-pages) -->
+    <header class="fixed top-0 w-full z-50 bg-white shadow-lg">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" id="logo" class="text-2xl font-bold text-amber-300 transition-colors duration-300" style="font-family: 'Playfair Display', serif;">Cafe MAJI</a>
+            <a href="index.html" class="font-playfair text-2xl font-bold text-amber-700">Cafe MAJI</a>
             <div class="hidden md:flex items-center space-x-4">
-                <a href="menu.html" class="nav-link">Menu</a>
-                <a href="about.html" class="nav-link">About Us</a>
-                <a href="gallery.html" class="nav-link">Gallery</a>
-                <a href="https://www.yelp.com/biz/cafe-maji-artesia" target="_blank" class="nav-link text-xl">
+                <a href="menu.html" class="nav-link text-gray-700 hover:text-amber-700">Menu</a>
+                <a href="about.html" class="nav-link text-gray-700 hover:text-amber-700">About Us</a>
+                <a href="gallery.html" class="nav-link text-gray-700 hover:text-amber-700">Gallery</a>
+                <a href="https://www.yelp.com/biz/cafe-maji-artesia" target="_blank" class="nav-link text-xl text-gray-700 hover:text-amber-700">
                     <i class="fab fa-yelp"></i>
                 </a>
             </div>
-            <button id="mobile-menu-button" class="md:hidden text-2xl transition-colors duration-300">
+            <button id="mobile-menu-button" class="md:hidden text-2xl text-gray-800">
                 <i class="fas fa-bars"></i>
             </button>
         </nav>
@@ -43,7 +43,7 @@
     <!-- Page Header -->
     <section class="page-header-bg pt-24 pb-12">
         <div class="container mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-800" style="font-family: 'Playfair Display', serif;">Our Gallery</h1>
+            <h1 class="font-playfair text-4xl md:text-5xl font-bold text-gray-800">Our Gallery</h1>
             <p class="mt-2 text-lg text-gray-600">A collection of moments from Cafe MAJI.</p>
         </div>
     </section>
@@ -51,45 +51,21 @@
     <!-- Main Content -->
     <main class="container mx-auto px-6 py-12">
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <!-- Image 1 -->
-            <div class="animate-on-scroll">
-                <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=1937" alt="Latte Art" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-            </div>
-            <!-- Image 2 -->
-            <div class="animate-on-scroll" data-delay="100ms">
-                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1740" alt="Cafe Interior" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-            </div>
-            <!-- Image 3 -->
-            <div class="animate-on-scroll" data-delay="200ms">
-                <img src="https://images.unsplash.com/photo-1525896523256-1a8402c59a45?q=80&w=1854" alt="Pastries" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-            </div>
-            <!-- Image 4 -->
-            <div class="animate-on-scroll" data-delay="300ms">
-                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1887" alt="Coffee cup" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-            </div>
-             <!-- Image 5 -->
-            <div class="animate-on-scroll">
-                <img src="https://images.unsplash.com/photo-1511920183353-32135bb096a5?q=80&w=1964" alt="Coffee Beans" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-            </div>
-            <!-- Image 6 -->
-            <div class="animate-on-scroll" data-delay="100ms">
-                <img src="https://images.unsplash.com/photo-1559925333-a4e9a973c66f?q=80&w=1974" alt="Cozy Interior" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-            </div>
-            <!-- Image 7 -->
-            <div class="animate-on-scroll" data-delay="200ms">
-                <img src="https://images.unsplash.com/photo-1514432324607-a07d763f03da?q=80&w=1887" alt="Pouring coffee" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-            </div>
-            <!-- Image 8 -->
-            <div class="animate-on-scroll" data-delay="300ms">
-                <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=1742" alt="Barista at work" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-            </div>
+            <div class="animate-on-scroll"><img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=1937" alt="Latte Art" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"></div>
+            <div class="animate-on-scroll" data-delay="100ms"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1740" alt="Cafe Interior" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"></div>
+            <div class="animate-on-scroll" data-delay="200ms"><img src="https://images.unsplash.com/photo-1525896523256-1a8402c59a45?q=80&w=1854" alt="Pastries" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"></div>
+            <div class="animate-on-scroll" data-delay="300ms"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1887" alt="Coffee cup" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"></div>
+            <div class="animate-on-scroll"><img src="https://images.unsplash.com/photo-1511920183353-32135bb096a5?q=80&w=1964" alt="Coffee Beans" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"></div>
+            <div class="animate-on-scroll" data-delay="100ms"><img src="https://images.unsplash.com/photo-1559925333-a4e9a973c66f?q=80&w=1974" alt="Cozy Interior" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"></div>
+            <div class="animate-on-scroll" data-delay="200ms"><img src="https://images.unsplash.com/photo-1514432324607-a07d763f03da?q=80&w=1887" alt="Pouring coffee" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"></div>
+            <div class="animate-on-scroll" data-delay="300ms"><img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=1742" alt="Barista at work" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"></div>
         </div>
     </main>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-6 text-center">
-            <p class="font-bold text-xl mb-2 text-amber-300" style="font-family: 'Playfair Display', serif;">Cafe MAJI</p>
+            <p class="font-playfair font-bold text-xl mb-2 text-amber-300">Cafe MAJI</p>
             <p class="text-gray-300">12232 Artesia Blvd, Artesia, CA 90701</p>
             <p class="text-gray-300">(562) 281-9511</p>
             <div class="mt-4 text-2xl space-x-6">
