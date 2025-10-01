@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +14,12 @@
 <body class="bg-white text-gray-700">
 
     <!-- Header & Navigation -->
-    <header class="fixed top-0 w-full z-50">
+    <header class="fixed top-0 w-full z-50 text-white">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" id="logo" class="text-2xl font-bold transition-colors duration-300" style="font-family: 'Playfair Display', serif;">Cafe MAJI</a>
+            <a href="index.html" id="logo" class="text-2xl font-bold text-amber-300 transition-colors duration-300" style="font-family: 'Playfair Display', serif;">Cafe MAJI</a>
             <div class="hidden md:flex items-center space-x-4">
                 <a href="menu.html" class="nav-link">Menu</a>
                 <a href="about.html" class="nav-link">About Us</a>
-                <a href="location.html" class="nav-link">Location / Contact</a>
                 <a href="gallery.html" class="nav-link">Gallery</a>
                 <a href="https://www.yelp.com/biz/cafe-maji-artesia" target="_blank" class="nav-link text-xl">
                     <i class="fab fa-yelp"></i>
@@ -34,7 +33,6 @@
         <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 bg-white/95 backdrop-blur-sm rounded-b-lg shadow-lg">
             <a href="menu.html" class="block py-2 px-3 text-gray-700 hover:bg-amber-100 rounded">Menu</a>
             <a href="about.html" class="block py-2 px-3 text-gray-700 hover:bg-amber-100 rounded">About Us</a>
-            <a href="location.html" class="block py-2 px-3 text-gray-700 hover:bg-amber-100 rounded">Location / Contact</a>
             <a href="gallery.html" class="block py-2 px-3 text-gray-700 hover:bg-amber-100 rounded">Gallery</a>
              <a href="https://www.yelp.com/biz/cafe-maji-artesia" target="_blank" class="block py-2 px-3 text-gray-700 hover:bg-amber-100 rounded">
                 <i class="fab fa-yelp mr-2"></i> Yelp
@@ -42,30 +40,50 @@
         </div>
     </header>
 
-    <main class="container mx-auto px-6 py-24">
-        <section class="my-16">
-            <h1 class="section-title pt-12">Our Moments</h1>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <div class="overflow-hidden rounded-lg shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1511920183353-32135bb096a5?q=80&w=1964&auto=format&fit=crop" alt="Gallery Image 1" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-300">
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1631213264620-4a7e40346123?q=80&w=1974&auto=format&fit=crop" alt="Gallery Image 2" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-300">
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-lg col-span-2 md:col-span-1">
-                    <img src="https://images.unsplash.com/photo-1559925333-a4e9a973c66f?q=80&w=1974&auto=format&fit=crop" alt="Gallery Image 3" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-300">
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1974&auto=format&fit=crop" alt="Gallery Image 4" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-300">
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1571215421152-3286f4455f32?q=80&w=1974&auto=format&fit=crop" alt="Gallery Image 5" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-300">
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1551030173-1a2a4a2a3e9c?q=80&w=1974&auto=format&fit=crop" alt="Gallery Image 6" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-300">
-                </div>
+    <!-- Page Header -->
+    <section class="page-header-bg pt-24 pb-12">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800" style="font-family: 'Playfair Display', serif;">Our Gallery</h1>
+            <p class="mt-2 text-lg text-gray-600">A collection of moments from Cafe MAJI.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Image 1 -->
+            <div class="animate-on-scroll">
+                <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=1937" alt="Latte Art" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
             </div>
-        </section>
+            <!-- Image 2 -->
+            <div class="animate-on-scroll" data-delay="100ms">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1740" alt="Cafe Interior" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+            </div>
+            <!-- Image 3 -->
+            <div class="animate-on-scroll" data-delay="200ms">
+                <img src="https://images.unsplash.com/photo-1525896523256-1a8402c59a45?q=80&w=1854" alt="Pastries" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+            </div>
+            <!-- Image 4 -->
+            <div class="animate-on-scroll" data-delay="300ms">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1887" alt="Coffee cup" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+            </div>
+             <!-- Image 5 -->
+            <div class="animate-on-scroll">
+                <img src="https://images.unsplash.com/photo-1511920183353-32135bb096a5?q=80&w=1964" alt="Coffee Beans" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+            </div>
+            <!-- Image 6 -->
+            <div class="animate-on-scroll" data-delay="100ms">
+                <img src="https://images.unsplash.com/photo-1559925333-a4e9a973c66f?q=80&w=1974" alt="Cozy Interior" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+            </div>
+            <!-- Image 7 -->
+            <div class="animate-on-scroll" data-delay="200ms">
+                <img src="https://images.unsplash.com/photo-1514432324607-a07d763f03da?q=80&w=1887" alt="Pouring coffee" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+            </div>
+            <!-- Image 8 -->
+            <div class="animate-on-scroll" data-delay="300ms">
+                <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=1742" alt="Barista at work" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->
@@ -86,3 +104,4 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+
