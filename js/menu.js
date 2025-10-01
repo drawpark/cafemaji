@@ -3,6 +3,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const categoriesContainer = document.getElementById('menu-categories');
     const loader = document.getElementById('menu-loader');
 
+    // --- Start of Edit ---
+    // Check if all required elements exist before proceeding
+    if (!menuContainer || !categoriesContainer || !loader) {
+        console.error('CRITICAL ERROR: One or more required elements for the menu page are missing from the HTML.');
+        console.error('Please ensure your HTML has elements with the following IDs: "menu-container", "menu-categories", and "menu-loader".');
+        // Display an error message to the user
+        const mainContainer = document.querySelector('main.container');
+        if(mainContainer) {
+            mainContainer.innerHTML = `<div class="text-center text-red-600 font-semibold">
+                <p>Error: Could not load menu.</p>
+                <p>Required page elements are missing.</p>
+            </div>`;
+        }
+        return; // Stop execution if elements are missing
+    }
+    // --- End of Edit ---
+
     // 데이터 경로
     const menuDataUrl = 'data/menu.json';
 
@@ -121,9 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 메뉴 로딩 시작
-    if (menuContainer && categoriesContainer && loader) {
-        loadMenu();
-    }
+    loadMenu();
 });
 
 // main.js의 스크롤 애니메이션 함수를 재사용할 수 있도록 전역 스코프에 노출
@@ -140,4 +155,5 @@ window.setupScrollAnimations = () => {
     }, { threshold: 0.1 });
     animatedElements.forEach(el => observer.observe(el));
 };
+
 
