@@ -1,42 +1,67 @@
 // JavaScript for header scroll effect
 const header = document.querySelector('header');
 const logo = document.getElementById('logo');
+// Ensure navLinks are selected correctly for the multi-page structure
 const navLinks = header.querySelectorAll('.nav-link');
 const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenuButtonIcon = mobileMenuButton.querySelector('i');
 
-// Function to handle header style changes
-function handleHeaderScroll() {
-    if (window.scrollY > 50 || !header.classList.contains('text-white')) {
-        header.classList.add('bg-white', 'shadow-lg');
-        logo.classList.remove('text-amber-300');
-        logo.classList.add('text-amber-700');
-        mobileMenuButton.classList.remove('text-white');
-        mobileMenuButton.classList.add('text-gray-800');
-        navLinks.forEach(link => {
-            link.classList.remove('text-gray-200', 'hover:text-white');
-            link.classList.add('text-gray-700', 'hover:text-amber-700');
-        });
-    } else {
-        header.classList.remove('bg-white', 'shadow-lg');
-        logo.classList.add('text-amber-300');
-        logo.classList.remove('text-amber-700');
-        mobileMenuButton.classList.add('text-white');
-        mobileMenuButton.classList.remove('text-gray-800');
-        navLinks.forEach(link => {
-            link.classList.add('text-gray-200', 'hover:text-white');
-            link.classList.remove('text-gray-700', 'hover:text-amber-700');
-        });
+// This function needs to be robust for all pages
+function handleScroll() {
+    // Only apply scroll effect on the homepage
+    if (window.location.pathname === '/' || window.location.pathname.endsWith('index.html')) {
+        if (window.scrollY > 50) {
+            header.classList.add('bg-white', 'shadow-lg');
+            
+            // Change text/icon colors for light background
+            header.classList.remove('text-white');
+            header.classList.add('text-gray-800');
+
+            logo.classList.remove('text-amber-300');
+            logo.classList.add('text-gray-800');
+
+            navLinks.forEach(link => {
+                link.classList.add('text-gray-700', 'hover:text-amber-700');
+                link.classList.remove('text-white'); // Use text-white for initial state
+            });
+
+        } else {
+            header.classList.remove('bg-white', 'shadow-lg');
+
+            // Change text/icon colors for transparent background
+            header.classList.add('text-white');
+            header.classList.remove('text-gray-800');
+
+            logo.classList.add('text-amber-300');
+            logo.classList.remove('text-gray-800');
+            
+            navLinks.forEach(link => {
+                link.classList.remove('text-gray-700', 'hover:text-amber-700');
+                link.classList.add('text-white');
+            });
+        }
     }
 }
 
-// Initial check for pages that are not the homepage (e.g., menu.html)
-// On these pages, the header should be white from the start.
-if (window.location.pathname.includes('menu.html') /* Add other pages here like || window.location.pathname.includes('about.html') */) {
-    header.classList.remove('text-white');
-    handleHeaderScroll(); 
-} else {
-    window.addEventListener('scroll', handleHeaderScroll);
-}
+// Set initial header style based on the page
+document.addEventListener('DOMContentLoaded', () => {
+    if (window.location.pathname === '/' || window.location.pathname.endsWith('index.html')) {
+        // Homepage starts with a transparent header
+        header.classList.add('text-white');
+        window.addEventListener('scroll', handleScroll);
+        // Initial check in case the page is reloaded halfway down
+        handleScroll();
+    } else {
+        // All other pages start with a solid white header
+        header.classList.add('bg-white', 'shadow-lg', 'text-gray-800');
+        logo.classList.add('text-gray-800');
+        logo.classList.remove('text-amber-300');
+         navLinks.forEach(link => {
+            link.classList.add('text-gray-700', 'hover:text-amber-700');
+            link.classList.remove('text-white');
+        });
+    }
+});
 
 
 // JavaScript for mobile menu toggle
@@ -47,17 +72,10 @@ mobileMenuButton.addEventListener('click', (e) => {
     mobileMenu.classList.toggle('hidden');
 });
 
-// Close mobile menu when a link is clicked
-const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-mobileMenuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-    });
-});
-
 // Close menu if clicking outside
 document.addEventListener('click', (e) => {
     if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
         mobileMenu.classList.add('hidden');
     }
 });
+
