@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Cafe MAJI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="bg-white text-gray-700">
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 w-full z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" id="logo" class="text-2xl font-bold transition-colors duration-300" style="font-family: 'Playfair Display', serif;">Cafe MAJI</a>
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="menu.html" class="nav-link">Menu</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="location.html" class="nav-link">Location / Contact</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="https://www.yelp.com/biz/cafe-maji-artesia" target="_blank" class="nav-link text-xl">
+                    <i class="fab fa-yelp"></i>
+                </a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-2xl transition-colors duration-300">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 bg-white/95 backdrop-blur-sm rounded-b-lg shadow-lg">
+            <a href="menu.html" class="block py-2 px-3 text-gray-700 hover:bg-amber-100 rounded">Menu</a>
+            <a href="about.html" class="block py-2 px-3 text-gray-700 hover:bg-amber-100 rounded">About Us</a>
+            <a href="location.html" class="block py-2 px-3 text-gray-700 hover:bg-amber-100 rounded">Location / Contact</a>
+            <a href="gallery.html" class="block py-2 px-3 text-gray-700 hover:bg-amber-100 rounded">Gallery</a>
+             <a href="https://www.yelp.com/biz/cafe-maji-artesia" target="_blank" class="block py-2 px-3 text-gray-700 hover:bg-amber-100 rounded">
+                <i class="fab fa-yelp mr-2"></i> Yelp
+            </a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-24">
+        <section id="about-us" class="my-16">
+            <h1 class="section-title pt-12">Our Story</h1>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-lg space-y-4">
+                    <p>
+                        Cafe MAJI는 단순한 커피숍 그 이상, 하나의 목적지가 되는 공간입니다. 저희의 독특한 분위기는 데이트, 인스타그램 사진 촬영, 또는 그저 평온한 순간을 즐기기에 완벽한 장소입니다.
+                    </p>
+                    <p>
+                        세련된 파티처럼 디자인된 저희 공간은 방문객에게 특별하고 기억에 남는 경험을 선사하기 위해 수많은 디테일로 꾸며져 있습니다. 일을 하거나, 친구들과 담소를 나누거나, 맛있는 디저트를 즐기기 위해 방문하셨든, 항상 따뜻하고 친근한 환경을 느끼실 수 있습니다.
+                    </p>
+                    <p class="font-semibold text-amber-800">Cafe MAJI에서 여러분이 가장 좋아하는 새로운 장소를 찾아보세요!</p>
+                </div>
+                 <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2047&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x400/f5e5d5/4a5568?text=Cafe+Ambiance';" alt="Cafe MAJI Ambiance" class="rounded-lg shadow-xl w-full h-auto object-cover">
+            </div>
+        </section>
+
+        <section id="features" class="my-24">
+            <h2 class="section-title">Atmosphere & Features</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="info-card !shadow-md p-8">
+                    <i class="fas fa-users text-4xl text-amber-600 mb-4"></i>
+                    <h3 class="font-bold text-lg">단체 방문에 적합</h3>
+                    <p class="text-sm text-gray-600">친구, 가족과 함께하기 좋은 넓은 공간</p>
+                </div>
+                 <div class="info-card !shadow-md p-8">
+                    <i class="fas fa-laptop text-4xl text-amber-600 mb-4"></i>
+                    <h3 class="font-bold text-lg">작업하기 좋은 환경</h3>
+                    <p class="text-sm text-gray-600">무료 Wi-Fi와 함께 집중할 수 있는 분위기</p>
+                </div>
+                 <div class="info-card !shadow-md p-8">
+                    <i class="fas fa-camera-retro text-4xl text-amber-600 mb-4"></i>
+                    <h3 class="font-bold text-lg">인생샷 명소</h3>
+                    <p class="text-sm text-gray-600">어디서 찍어도 예쁜 인테리어</p>
+                </div>
+                 <div class="info-card !shadow-md p-8">
+                    <i class="fas fa-birthday-cake text-4xl text-amber-600 mb-4"></i>
+                    <h3 class="font-bold text-lg">디저트 맛집</h3>
+                    <p class="text-sm text-gray-600">브런치, 런치, 그리고 달콤한 디저트</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="font-bold text-xl mb-2 text-amber-300" style="font-family: 'Playfair Display', serif;">Cafe MAJI</p>
+            <p class="text-gray-300">12232 Artesia Blvd, Artesia, CA 90701</p>
+            <p class="text-gray-300">(562) 281-9511</p>
+            <div class="mt-4 text-2xl space-x-6">
+                <a href="#" class="hover:text-amber-300 transition-colors"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-amber-300 transition-colors"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.yelp.com/biz/cafe-maji-artesia" target="_blank" class="hover:text-amber-300 transition-colors"><i class="fab fa-yelp"></i></a>
+            </div>
+            <p class="mt-6 text-sm text-gray-400">&copy; 2025 Cafe MAJI. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
