@@ -45,6 +45,7 @@ function handleScroll() {
 
 // Set initial header style based on the page
 document.addEventListener('DOMContentLoaded', () => {
+    // --- Existing Header Logic ---
     if (window.location.pathname === '/' || window.location.pathname.endsWith('index.html')) {
         // Homepage starts with a transparent header
         header.classList.add('text-white');
@@ -59,6 +60,42 @@ document.addEventListener('DOMContentLoaded', () => {
          navLinks.forEach(link => {
             link.classList.add('text-gray-700', 'hover:text-amber-700');
             link.classList.remove('text-white');
+        });
+    }
+
+    // --- New Scroll Animation Logic ---
+    // Select all elements with the class 'animate-on-scroll'
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+    // Check if the browser supports IntersectionObserver
+    if ("IntersectionObserver" in window) {
+        // Set initial styles for elements to be animated
+        animatedElements.forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            // Allow for staggered animations via data-delay attribute in HTML
+            el.style.transitionDelay = el.dataset.delay || '0s';
+        });
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                // When the element is in the viewport
+                if (entry.isIntersecting) {
+                    // Make it visible
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    // Stop observing the element after it has been animated
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger the animation when 10% of the element is visible
+        });
+
+        // Start observing each element
+        animatedElements.forEach(element => {
+            observer.observe(element);
         });
     }
 });
