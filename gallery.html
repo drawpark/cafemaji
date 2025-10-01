@@ -13,7 +13,7 @@
 </head>
 <body class="bg-white text-gray-700">
 
-    <!-- Header & Navigation (Corrected for Sub-pages) -->
+    <!-- Header & Navigation -->
     <header class="fixed top-0 w-full z-50 bg-white shadow-lg">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="font-playfair text-2xl font-bold text-amber-700">Cafe MAJI</a>
@@ -51,16 +51,68 @@
     <!-- Main Content -->
     <main class="container mx-auto px-6 py-12">
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <div class="animate-on-scroll"><img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=1937" alt="Latte Art" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"></div>
-            <div class="animate-on-scroll" data-delay="100ms"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1740" alt="Cafe Interior" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"></div>
-            <div class="animate-on-scroll" data-delay="200ms"><img src="https://images.unsplash.com/photo-1525896523256-1a8402c59a45?q=80&w=1854" alt="Pastries" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"></div>
-            <div class="animate-on-scroll" data-delay="300ms"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1887" alt="Coffee cup" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"></div>
-            <div class="animate-on-scroll"><img src="https://images.unsplash.com/photo-1511920183353-32135bb096a5?q=80&w=1964" alt="Coffee Beans" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"></div>
-            <div class="animate-on-scroll" data-delay="100ms"><img src="https://images.unsplash.com/photo-1559925333-a4e9a973c66f?q=80&w=1974" alt="Cozy Interior" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"></div>
-            <div class="animate-on-scroll" data-delay="200ms"><img src="https://images.unsplash.com/photo-1514432324607-a07d763f03da?q=80&w=1887" alt="Pouring coffee" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"></div>
-            <div class="animate-on-scroll" data-delay="300ms"><img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=1742" alt="Barista at work" class="w-full h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"></div>
+            <!-- Images now have a wrapper for hover effects and lightbox functionality -->
+            <div class="animate-on-scroll group relative overflow-hidden rounded-lg shadow-lg cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=1937" alt="Latte Art" class="gallery-img w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-500 flex items-center justify-center">
+                    <i class="fas fa-search text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></i>
+                </div>
+            </div>
+            <div class="animate-on-scroll group relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-delay="100ms">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1740" alt="Cafe Interior" class="gallery-img w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-500 flex items-center justify-center">
+                    <i class="fas fa-search text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></i>
+                </div>
+            </div>
+            <div class="animate-on-scroll group relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-delay="200ms">
+                <img src="https://images.unsplash.com/photo-1525896523256-1a8402c59a45?q=80&w=1854" alt="Pastries" class="gallery-img w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-500 flex items-center justify-center">
+                    <i class="fas fa-search text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></i>
+                </div>
+            </div>
+            <div class="animate-on-scroll group relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-delay="300ms">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1887" alt="Coffee cup" class="gallery-img w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-500 flex items-center justify-center">
+                    <i class="fas fa-search text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></i>
+                </div>
+            </div>
+            <div class="animate-on-scroll group relative overflow-hidden rounded-lg shadow-lg cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1511920183353-32135bb096a5?q=80&w=1964" alt="Coffee Beans" class="gallery-img w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-500 flex items-center justify-center">
+                    <i class="fas fa-search text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></i>
+                </div>
+            </div>
+            <div class="animate-on-scroll group relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-delay="100ms">
+                <img src="https://images.unsplash.com/photo-1559925333-a4e9a973c66f?q=80&w=1974" alt="Cozy Interior" class="gallery-img w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-500 flex items-center justify-center">
+                    <i class="fas fa-search text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></i>
+                </div>
+            </div>
+            <div class="animate-on-scroll group relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-delay="200ms">
+                <img src="https://images.unsplash.com/photo-1514432324607-a07d763f03da?q=80&w=1887" alt="Pouring coffee" class="gallery-img w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-500 flex items-center justify-center">
+                    <i class="fas fa-search text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></i>
+                </div>
+            </div>
+            <div class="animate-on-scroll group relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-delay="300ms">
+                <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=1742" alt="Barista at work" class="gallery-img w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-500 flex items-center justify-center">
+                    <i class="fas fa-search text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></i>
+                </div>
+            </div>
         </div>
     </main>
+    
+    <!-- Lightbox Modal Structure -->
+    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 items-center justify-center z-[999] hidden animate-fade-in">
+        <button id="lightbox-close" class="absolute top-5 right-8 text-white text-4xl hover:text-amber-300 transition-colors z-10">&times;</button>
+        <button id="lightbox-prev" class="absolute left-8 top-1/2 -translate-y-1/2 text-white text-3xl md:text-4xl hover:text-amber-300 transition-colors"><i class="fas fa-chevron-left"></i></button>
+        <button id="lightbox-next" class="absolute right-8 top-1/2 -translate-y-1/2 text-white text-3xl md:text-4xl hover:text-amber-300 transition-colors"><i class="fas fa-chevron-right"></i></button>
+        <div class="max-w-[90vw] max-h-[85vh] relative flex flex-col items-center justify-center">
+            <img id="lightbox-img" src="" alt="Enlarged gallery image" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl">
+            <p id="lightbox-caption" class="text-center text-white mt-4 text-lg opacity-80"></p>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
