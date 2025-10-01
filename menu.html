@@ -14,18 +14,18 @@
 <body class="bg-white text-gray-700">
 
     <!-- Header & Navigation -->
-    <header class="fixed top-0 w-full z-50 text-white">
+    <header class="fixed top-0 w-full z-50 bg-white shadow-lg text-gray-800">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" id="logo" class="text-2xl font-bold text-amber-300 transition-colors duration-300" style="font-family: 'Playfair Display', serif;">Cafe MAJI</a>
+            <a href="index.html" id="logo" class="text-2xl font-bold text-amber-700 transition-colors duration-300" style="font-family: 'Playfair Display', serif;">Cafe MAJI</a>
             <div class="hidden md:flex items-center space-x-4">
-                <a href="menu.html" class="nav-link">Menu</a>
-                <a href="about.html" class="nav-link">About Us</a>
-                <a href="gallery.html" class="nav-link">Gallery</a>
-                <a href="https://www.yelp.com/biz/cafe-maji-artesia" target="_blank" class="nav-link text-xl">
+                <a href="menu.html" class="nav-link text-gray-700 hover:text-amber-700">Menu</a>
+                <a href="about.html" class="nav-link text-gray-700 hover:text-amber-700">About Us</a>
+                <a href="gallery.html" class="nav-link text-gray-700 hover:text-amber-700">Gallery</a>
+                <a href="https://www.yelp.com/biz/cafe-maji-artesia" target="_blank" class="nav-link text-xl text-gray-700 hover:text-amber-700">
                     <i class="fab fa-yelp"></i>
                 </a>
             </div>
-            <button id="mobile-menu-button" class="md:hidden text-2xl transition-colors duration-300">
+            <button id="mobile-menu-button" class="md:hidden text-2xl transition-colors duration-300 text-gray-800">
                 <i class="fas fa-bars"></i>
             </button>
         </nav>
@@ -40,18 +40,15 @@
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="page-header-bg pt-24 pb-12">
-        <div class="container mx-auto px-6 text-center">
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 pt-24 pb-12">
+        <div class="text-center mb-10">
             <h1 class="text-4xl md:text-5xl font-bold text-gray-800" style="font-family: 'Playfair Display', serif;">Our Menu</h1>
             <p class="mt-2 text-lg text-gray-600">Handcrafted with love and the finest ingredients.</p>
         </div>
-    </section>
 
-    <!-- Main Content -->
-    <main class="container mx-auto px-6 py-12">
         <!-- Menu content will be dynamically inserted here -->
-        <div id="menu-container" class="space-y-16">
+        <div id="menu-container" class="space-y-12">
             <!-- Loading message -->
             <p id="loading-message" class="text-center text-gray-500">Loading menu...</p>
         </div>
