@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Cafe MAJI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="bg-white text-gray-700">
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 w-full z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" id="logo" class="text-2xl font-bold transition-colors duration-300" style="font-family: 'Playfair Display', serif;">Cafe MAJI</a>
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="menu.html" class="nav-link">Menu</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="location.html" class="nav-link">Location / Contact</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="https://www.yelp.com/biz/cafe-maji-artesia" target="_blank" class="nav-link text-xl">
+                    <i class="fab fa-yelp"></i>
+                </a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-2xl transition-colors duration-300">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 bg-white/95 backdrop-blur-sm rounded-b-lg shadow-lg">
+            <a href="menu.html" class="block py-2 px-3 text-gray-700 hover:bg-amber-100 rounded">Menu</a>
+            <a href="about.html" class="block py-2 px-3 text-gray-700 hover:bg-amber-100 rounded">About Us</a>
+            <a href="location.html" class="block py-2 px-3 text-gray-700 hover:bg-amber-100 rounded">Location / Contact</a>
+            <a href="gallery.html" class="block py-2 px-3 text-gray-700 hover:bg-amber-100 rounded">Gallery</a>
+             <a href="https://www.yelp.com/biz/cafe-maji-artesia" target="_blank" class="block py-2 px-3 text-gray-700 hover:bg-amber-100 rounded">
+                <i class="fab fa-yelp mr-2"></i> Yelp
+            </a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-24">
+        <section class="my-16">
+            <h1 class="section-title pt-12">Our Moments</h1>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1511920183353-32135bb096a5?q=80&w=1964&auto=format&fit=crop" alt="Gallery Image 1" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1631213264620-4a7e40346123?q=80&w=1974&auto=format&fit=crop" alt="Gallery Image 2" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg col-span-2 md:col-span-1">
+                    <img src="https://images.unsplash.com/photo-1559925333-a4e9a973c66f?q=80&w=1974&auto=format&fit=crop" alt="Gallery Image 3" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1974&auto=format&fit=crop" alt="Gallery Image 4" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1571215421152-3286f4455f32?q=80&w=1974&auto=format&fit=crop" alt="Gallery Image 5" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1551030173-1a2a4a2a3e9c?q=80&w=1974&auto=format&fit=crop" alt="Gallery Image 6" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-300">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="font-bold text-xl mb-2 text-amber-300" style="font-family: 'Playfair Display', serif;">Cafe MAJI</p>
+            <p class="text-gray-300">12232 Artesia Blvd, Artesia, CA 90701</p>
+            <p class="text-gray-300">(562) 281-9511</p>
+            <div class="mt-4 text-2xl space-x-6">
+                <a href="#" class="hover:text-amber-300 transition-colors"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-amber-300 transition-colors"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.yelp.com/biz/cafe-maji-artesia" target="_blank" class="hover:text-amber-300 transition-colors"><i class="fab fa-yelp"></i></a>
+            </div>
+            <p class="mt-6 text-sm text-gray-400">&copy; 2025 Cafe MAJI. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
