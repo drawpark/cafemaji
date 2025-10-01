@@ -1,1 +1,37 @@
-123
+[
+    {
+        "category": "Coffee & Espresso",
+        "name": "Lavender Hot Chocolate",
+        "description": "A unique floral twist on a classic hot chocolate. Comes with a complimentary pillowy vanilla eclair.",
+        "price": "6.50",
+        "imageUrl": "https://images.unsplash.com/photo-1610482350794-c8524e9d7568?q=80&w=1974&auto=format&fit=crop"
+    },
+    {
+        "category": "Coffee & Espresso",
+        "name": "Caramel Macchiato",
+        "description": "Freshly steamed milk with vanilla-flavored syrup marked with espresso and topped with a caramel drizzle.",
+        "price": "5.75",
+        "imageUrl": "https://images.unsplash.com/photo-1571215421152-3286f4455f32?q=80&w=1974&auto=format&fit=crop"
+    },
+    {
+        "category": "Desserts",
+        "name": "Matcha Tiramisu",
+        "description": "Our highly marketed and beloved classic tiramisu with a rich matcha flavor. A must-try!",
+        "price": "9.50",
+        "imageUrl": "https://images.unsplash.com/photo-1631213264620-4a7e40346123?q=80&w=1974&auto=format&fit=crop"
+    },
+    {
+        "category": "Desserts",
+        "name": "Pillowy Vanilla Eclair",
+        "description": "A light and airy eclair filled with rich vanilla cream and topped with a delicate glaze.",
+        "price": "4.50",
+        "imageUrl": "https://images.unsplash.com/photo-1627762588887-2a1a8c3e8e1f?q=80&w=1974&auto=format&fit=crop"
+    },
+    {
+        "category": "Brunch",
+        "name": "Avocado Toast",
+        "description": "Thick-cut toast topped with fresh avocado, cherry tomatoes, and a sprinkle of chili flakes.",
+        "price": "12.00",
+        "imageUrl": "https://images.unsplash.com/photo-1584365685547-9a5fb6f23e2f?q=80&w=1974&auto=format&fit=crop"
+    }
+]
