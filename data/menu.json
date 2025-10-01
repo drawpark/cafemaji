@@ -1,37 +1,67 @@
-[
+{
+  "categories": [
+    { "name": "Coffee" },
+    { "name": "Tea & Lattes" },
+    { "name": "Desserts" },
+    { "name": "Pastries" }
+  ],
+  "items": [
     {
-        "category": "Coffee & Espresso",
-        "name": "Lavender Hot Chocolate",
-        "description": "A unique floral twist on a classic hot chocolate. Comes with a complimentary pillowy vanilla eclair.",
-        "price": "6.50",
-        "imageUrl": "https://images.unsplash.com/photo-1610482350794-c8524e9d7568?q=80&w=1974&auto=format&fit=crop"
+      "name": "Espresso",
+      "description": "A concentrated coffee beverage brewed by forcing hot water under pressure through finely-ground coffee beans.",
+      "price": "$3.50",
+      "category": "Coffee",
+      "imageUrl": "https://images.unsplash.com/photo-1593443320739-7356c9a93c42?q=80&w=600"
     },
     {
-        "category": "Coffee & Espresso",
+      "name": "Americano",
+      "description": "Espresso shots topped with hot water create a light layer of crema culminating in this wonderfully rich cup.",
+      "price": "$4.00",
+      "category": "Coffee",
+      "imageUrl": "https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=600"
+    },
+    {
+      "name": "Matcha Tiramisu",
+      "description": "A delightful Japanese twist on the classic Italian dessert, featuring layers of matcha-soaked ladyfingers and mascarpone cream.",
+      "price": "$8.00",
+      "category": "Desserts",
+      "imageUrl": "https://images.unsplash.com/photo-1627776582998-c178a3e9be2d?q=80&w=600"
+    },
+    {
+      "name": "Lavender Hot Chocolate",
+      "description": "A unique and aromatic beverage combining the soothing floral notes of lavender with rich, decadent hot chocolate.",
+      "price": "$5.50",
+      "category": "Tea & Lattes",
+      "imageUrl": "https://images.unsplash.com/photo-1542287754-03a5bf7a9345?q=80&w=600"
+    },
+    {
+      "name": "Vanilla Eclair",
+      "description": "A classic French pastry with a crisp choux dough shell, filled with a rich vanilla cream and topped with chocolate icing.",
+      "price": "$4.50",
+      "category": "Pastries",
+      "imageUrl": "https://images.unsplash.com/photo-1610432322312-703b11d73a7a?q=80&w=600"
+    },
+    {
+        "name": "Iced Matcha Latte",
+        "description": "A refreshing blend of finely ground green tea powder, milk, and a touch of sweetness, served over ice.",
+        "price": "$6.00",
+        "category": "Tea & Lattes",
+        "imageUrl": "https://images.unsplash.com/photo-1578358071351-2cbe2a94f318?q=80&w=600"
+      },
+      {
+        "name": "Croissant",
+        "description": "A buttery, flaky, and viennoiserie pastry of Austrian origin, named for its historical crescent shape.",
+        "price": "$3.75",
+        "category": "Pastries",
+        "imageUrl": "https://images.unsplash.com/photo-1589114442142-2b36f082e741?q=80&w=600"
+      },
+      {
         "name": "Caramel Macchiato",
         "description": "Freshly steamed milk with vanilla-flavored syrup marked with espresso and topped with a caramel drizzle.",
-        "price": "5.75",
-        "imageUrl": "https://images.unsplash.com/photo-1571215421152-3286f4455f32?q=80&w=1974&auto=format&fit=crop"
-    },
-    {
-        "category": "Desserts",
-        "name": "Matcha Tiramisu",
-        "description": "Our highly marketed and beloved classic tiramisu with a rich matcha flavor. A must-try!",
-        "price": "9.50",
-        "imageUrl": "https://images.unsplash.com/photo-1631213264620-4a7e40346123?q=80&w=1974&auto=format&fit=crop"
-    },
-    {
-        "category": "Desserts",
-        "name": "Pillowy Vanilla Eclair",
-        "description": "A light and airy eclair filled with rich vanilla cream and topped with a delicate glaze.",
-        "price": "4.50",
-        "imageUrl": "https://images.unsplash.com/photo-1627762588887-2a1a8c3e8e1f?q=80&w=1974&auto=format&fit=crop"
-    },
-    {
-        "category": "Brunch",
-        "name": "Avocado Toast",
-        "description": "Thick-cut toast topped with fresh avocado, cherry tomatoes, and a sprinkle of chili flakes.",
-        "price": "12.00",
-        "imageUrl": "https://images.unsplash.com/photo-1584365685547-9a5fb6f23e2f?q=80&w=1974&auto=format&fit=crop"
-    }
-]
+        "price": "$5.75",
+        "category": "Coffee",
+        "imageUrl": "https://images.unsplash.com/photo-1571211602492-563d37a1a63c?q=80&w=600"
+      }
+  ]
+}
+
