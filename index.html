@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe MAJI - Artesia, CA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Lora', serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1511920183353-32135bb096a5?q=80&w=1964&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            @apply text-4xl font-bold text-gray-800 mb-8 text-center;
+        }
+        .info-card {
+            @apply bg-white p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105 duration-300;
+        }
+        .nav-link {
+            @apply px-4 py-2 rounded-md transition-colors duration-300 font-medium;
+        }
+        .btn {
+            @apply px-8 py-3 bg-amber-600 text-white font-semibold rounded-lg shadow-md hover:bg-amber-700 transition-all transform hover:scale-105 duration-300;
+        }
+        /* Custom styles for header transition */
+        header {
+            transition: background-color 0.4s ease-out, box-shadow 0.4s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-amber-50 text-gray-700">
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 w-full z-50 text-white">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" id="logo" class="text-2xl font-bold text-amber-300 transition-colors duration-300" style="font-family: 'Playfair Display', serif;">Cafe MAJI</a>
+            <div class="hidden md:flex space-x-2">
+                <a href="#about" class="nav-link text-gray-200 hover:text-white">About</a>
+                <a href="#reviews" class="nav-link text-gray-200 hover:text-white">Reviews</a>
+                <a href="#info" class="nav-link text-gray-200 hover:text-white">Info</a>
+                <a href="#hours" class="nav-link text-gray-200 hover:text-white">Hours</a>
+                <a href="#contact" class="nav-link text-gray-200 hover:text-white">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-2xl text-white transition-colors duration-300">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 bg-white/95 backdrop-blur-sm rounded-b-lg shadow-lg">
+            <a href="#about" class="block py-2 px-3 text-gray-700 hover:bg-amber-100 rounded">About</a>
+            <a href="#reviews" class="block py-2 px-3 text-gray-700 hover:bg-amber-100 rounded">Reviews</a>
+            <a href="#info" class="block py-2 px-3 text-gray-700 hover:bg-amber-100 rounded">Info</a>
+            <a href="#hours" class="block py-2 px-3 text-gray-700 hover:bg-amber-100 rounded">Hours</a>
+            <a href="#contact" class="block py-2 px-3 text-gray-700 hover:bg-amber-100 rounded">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white h-screen flex items-center justify-center">
+        <div class="text-center">
+            <h1 class="text-5xl md:text-7xl font-bold drop-shadow-lg" style="font-family: 'Playfair Display', serif;">Welcome to Cafe MAJI</h1>
+            <p class="mt-4 text-xl md:text-2xl drop-shadow-md font-light">A cute, trendy, and classy cafe experience.</p>
+            <a href="#about" class="mt-8 inline-block btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- About Section -->
+        <section id="about" class="my-16 scroll-mt-20">
+            <h2 class="section-title">A Vibe for Every Occasion</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <img src="https://images.unsplash.com/photo-1559925333-a4e9a973c66f?q=80&w=1974&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x400/f5e5d5/4a5568?text=Cozy+Interior';" alt="Cafe MAJI Interior" class="rounded-lg shadow-xl w-full h-auto object-cover">
+                <div class="text-lg">
+                    <p class="mb-4">
+                        Cafe MAJI is more than just a coffee shop; it's a destination. Our super cool atmosphere is perfect for dates, Instagram photos, or simply enjoying a calm moment. 
+                    </p>
+                    <p class="mb-4">
+                        Designed to feel like a chic, high-school party, our space is decked out with countless details that create a unique and memorable experience. Whether you're here to work, catch up with friends, or enjoy a delicious dessert, you'll find a welcoming and friendly environment.
+                    </p>
+                    <p class="font-semibold text-amber-800">Come find your new favorite spot!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="my-16 scroll-mt-20">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="info-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-amber-700"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-800">Brandon Choi</p>
+                            <p class="text-sm text-gray-500">22 September 2025</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"This place is really cute for a date and instagram pictures. The food is pretty good, nothing amazing, but good enough. However, the items are all a little over priced."</p>
+                </div>
+                <!-- Review 2 -->
+                <div class="info-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mr-4">
+                             <i class="fas fa-user text-amber-700"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-800">Surabhi Vijay</p>
+                            <p class="text-sm text-gray-500">13 September 2025</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"We stumbled upon this place... This is an adorable place, decked up with a zillion baubles... The service is friendly. The edibles look very promising... The ONLY thief of a star is the misleading dollar signage on yelp."</p>
+                </div>
+                <!-- Review 3 -->
+                <div class="info-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mr-4">
+                             <i class="fas fa-user text-amber-700"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-800">Caleb Starkovich</p>
+                            <p class="text-sm text-gray-500">1 September 2025</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Super cool atmosphere! Every friend I have brought here absolutely loved it and had a great time. Staff always has a smile and the food tastes great. There is a sense of calmness when you enter cafe maji."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Info Section -->
+        <section id="info" class="my-16 bg-white py-12 rounded-xl shadow-lg scroll-mt-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Cafe Information</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Amenities -->
+                    <div class="info-card !shadow-none">
+                        <h3 class="font-bold text-xl mb-4 text-amber-800" style="font-family: 'Playfair Display', serif;">Amenities & Features</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Offers Takeout</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Good for Groups, Kids, & Working</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Good for Brunch, Lunch, Dessert</li>
+                            <li class="flex items-center"><i class="fas fa-wifi text-green-500 mr-3"></i> Free Wi-Fi</li>
+                            <li class="flex items-center"><i class="fas fa-parking text-green-500 mr-3"></i> Street & Private Lot Parking</li>
+                            <li class="flex items-center"><i class="fas fa-restroom text-green-500 mr-3"></i> Gender-neutral restrooms</li>
+                            <li class="flex items-center"><i class="fas fa-times-circle text-red-500 mr-3"></i> No Reservations or Delivery</li>
+                             <li class="flex items-center"><i class="fas fa-times-circle text-red-500 mr-3"></i> No Outdoor Seating</li>
+                        </ul>
+                    </div>
+                    <!-- Payments & Safety -->
+                    <div class="info-card !shadow-none">
+                        <h3 class="font-bold text-xl mb-4 text-amber-800" style="font-family: 'Playfair Display', serif;">Payments & Safety</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center"><i class="fas fa-credit-card text-green-500 mr-3"></i> Accepts Credit Cards</li>
+                            <li class="flex items-center"><i class="fab fa-apple-pay text-green-500 mr-3 text-2xl"></i> Accepts Apple Pay</li>
+                            <li class="flex items-center"><i class="fas fa-head-side-mask text-green-500 mr-3"></i> Masks required</li>
+                            <li class="flex items-center"><i class="fas fa-user-shield text-green-500 mr-3"></i> Staff wears masks</li>
+                            <li class="flex items-center"><i class="fab fa-android text-red-500 mr-3 text-2xl"></i> No Android Pay</li>
+                            <li class="flex items-center"><i class="fab fa-bitcoin text-red-500 mr-3 text-2xl"></i> No Cryptocurrency</li>
+                        </ul>
+                    </div>
+                    <!-- Atmosphere -->
+                    <div class="info-card !shadow-none md:col-span-2 lg:col-span-1">
+                        <h3 class="font-bold text-xl mb-4 text-amber-800" style="font-family: 'Playfair Display', serif;">Atmosphere</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center"><i class="fas fa-star text-yellow-500 mr-3"></i> Hipster, Trendy, Classy, Casual</li>
+                            <li class="flex items-center"><i class="fas fa-volume-up text-blue-500 mr-3"></i> Moderate Noise Level</li>
+                            <li class="flex items-center"><i class="fas fa-dog text-red-500 mr-3"></i> Dogs Not Allowed</li>
+                            <li class="flex items-center"><i class="fas fa-wheelchair text-red-500 mr-3"></i> Not Wheelchair Accessible</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hours & Location Section -->
+        <section id="hours" class="my-16 scroll-mt-20">
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <!-- Hours -->
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h2 class="section-title !mb-6">Work Hours</h2>
+                    <div class="space-y-3 text-lg">
+                        <div class="flex justify-between border-b pb-2"><span class="font-semibold">Monday</span> <span>1:00 PM - 11:00 PM</span></div>
+                        <div class="flex justify-between border-b pb-2"><span class="font-semibold">Tuesday</span> <span>1:00 PM - 11:00 PM</span></div>
+                        <div class="flex justify-between border-b pb-2"><span class="font-semibold">Wednesday</span> <span>1:00 PM - 11:00 PM</span></div>
+                        <div class="flex justify-between border-b pb-2"><span class="font-semibold">Thursday</span> <span>1:00 PM - 11:00 PM</span></div>
+                        <div class="flex justify-between border-b pb-2"><span class="font-semibold">Friday</span> <span>1:00 PM - 11:00 PM</span></div>
+                        <div class="flex justify-between border-b pb-2"><span class="font-semibold">Saturday</span> <span>1:00 PM - 11:00 PM</span></div>
+                        <div class="flex justify-between"><span class="font-semibold">Sunday</span> <span>1:00 PM - 11:00 PM</span></div>
+                    </div>
+                </div>
+                <!-- Location -->
+                <div id="contact" class="bg-white p-8 rounded-xl shadow-lg scroll-mt-20">
+                    <h2 class="section-title !mb-6">Our Location</h2>
+                    <div class="mb-4">
+                        <h3 class="font-bold text-gray-800">Address</h3>
+                        <p>12232 Artesia Blvd, Artesia, CA 90701, USA</p>
+                    </div>
+                    <div class="mb-6">
+                        <h3 class="font-bold text-gray-800">Phone</h3>
+                        <p>(562) 281-9511</p>
+                    </div>
+                    <div class="h-64 md:h-80 rounded-lg overflow-hidden shadow-inner">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.527376031238!2d-118.0864386847926!3d33.87611398069634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd2d08310c1e57%3A0xe5a33b9e4725e141!2s12232%20Artesia%20Blvd%2C%20Artesia%2C%20CA%2090701!5e0!3m2!1sen!2sus!4v1664582930263!5m2!1sen!2sus" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="font-bold text-xl mb-2 text-amber-300" style="font-family: 'Playfair Display', serif;">Cafe MAJI</p>
+            <p class="text-gray-300">12232 Artesia Blvd, Artesia, CA 90701</p>
+            <p class="text-gray-300">(562) 281-9511</p>
+            <div class="mt-4 text-2xl space-x-6">
+                <a href="#" class="hover:text-amber-300 transition-colors"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-amber-300 transition-colors"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="hover:text-amber-300 transition-colors"><i class="fab fa-yelp"></i></a>
+            </div>
+            <p class="mt-6 text-sm text-gray-400">&copy; 2025 Cafe MAJI. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for header scroll effect
+        const header = document.querySelector('header');
+        const logo = document.getElementById('logo');
+        const navLinks = header.querySelectorAll('.nav-link');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-white', 'shadow-lg');
+                logo.classList.remove('text-amber-300');
+                logo.classList.add('text-amber-700');
+                mobileMenuButton.classList.remove('text-white');
+                mobileMenuButton.classList.add('text-gray-800');
+                navLinks.forEach(link => {
+                    link.classList.remove('text-gray-200', 'hover:text-white');
+                    link.classList.add('text-gray-700', 'hover:text-amber-700');
+                });
+            } else {
+                header.classList.remove('bg-white', 'shadow-lg');
+                logo.classList.add('text-amber-300');
+                logo.classList.remove('text-amber-700');
+                mobileMenuButton.classList.add('text-white');
+                mobileMenuButton.classList.remove('text-gray-800');
+                navLinks.forEach(link => {
+                    link.classList.add('text-gray-200', 'hover:text-white');
+                    link.classList.remove('text-gray-700', 'hover:text-amber-700');
+                });
+            }
+        });
+        
+        // JavaScript for mobile menu toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Close menu if clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
+
