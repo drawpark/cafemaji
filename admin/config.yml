@@ -1,17 +1,51 @@
+# Netlify CMS Configuration File
+
+# Backend: Connects to your GitHub repository
 backend:
-  name: github
-  repo: 사용자명/저장소명    # 예: keundrawing/my-portfolio
-  branch: main
+  name: git-gateway
+  repo: "drawpark/cafemaji" # Explicitly define the repository
+  branch: main # Or your default branch
 
-media_folder: "assets/images/uploads"
-public_folder: "/assets/images/uploads"
+# Media files (like menu images) will be stored in this folder
+media_folder: "images/uploads"
+# The public path to media files
+public_folder: "/images/uploads"
 
+# Publish Mode: Allows creating drafts before publishing
+publish_mode: editorial_workflow
+
+# Collections: Defines the content types you can edit
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "_posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+  # Collection for managing the menu
+  - name: "menu" # An identifier for the collection
+    label: "메뉴 관리 (Menu)" # The name displayed in the CMS UI
+    label_singular: "메뉴 아이템 (Menu Item)"
+    folder: "data/menu_items" # This setting is not used for file collections
+    # Specifies that this collection edits a single file
+    file: "data/menu.json" 
+    description: "여기에서 카페 메뉴를 추가, 수정, 삭제할 수 있습니다."
+    fields: # Defines the fields for the data in the file
+      # This 'list' widget corresponds to the "items" array in your menu.json
+      - name: "items"
+        label: "메뉴 아이템 목록"
+        label_singular: "메뉴 아이템"
+        widget: "list"
+        fields: # Defines the fields for each object in the "items" array
+          - { label: "메뉴 이름 (Name)", name: "name", widget: "string" }
+          - { label: "설명 (Description)", name: "description", widget: "text" }
+          - { label: "가격 (Price)", name: "price", widget: "string" }
+          - label: "카테고리 (Category)"
+            name: "category"
+            widget: "select" # A dropdown menu for categories
+            options: ["Coffee", "Tea & Lattes", "Desserts", "Pastries"]
+          - { label: "메뉴 사진 (Image)", name: "imageUrl", widget: "image" }
+
+      # This 'list' widget manages the categories themselves
+      - name: "categories"
+        label: "메뉴 카테고리"
+        label_singular: "카테고리"
+        widget: "list"
+        collapsed: true # Start with this section collapsed in the UI
+        fields:
+          - { label: "카테고리 이름", name: "name", widget: "string" }
+
